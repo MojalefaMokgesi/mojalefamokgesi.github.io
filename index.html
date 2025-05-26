@@ -9,9 +9,26 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
             color: #333;
+            /* Background image */
+            background-image: url("C:\Users\Mokge\OneDrive\Documents\GitHub\mojalefamokgesi.github.io\images\background.jpg.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            z-index: 0;
         }
+            /* Overlay to darken background for readability */
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, 0.85); /* light white overlay with some transparency */
+                z-index: -1;
+            }
 
         header {
             background-color: #0a66c2;
@@ -54,6 +71,7 @@
             max-width: 900px;
             margin: 20px auto;
             padding: 0 20px;
+            background-color: transparent;
         }
 
         h2 {
