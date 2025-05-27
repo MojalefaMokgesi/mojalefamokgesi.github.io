@@ -6,43 +6,44 @@
     <title>AlgoTrade Strategy | Mojalefa Mokgesi</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 0;
             background: url('images/articlepicture(2).png') no-repeat center center fixed;
             background-size: cover;
-            color: #f5f5f5;
+            color: #333;
         }
 
         .overlay {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 40px 20px;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: auto;
-            background: rgba(30, 30, 30, 0.85);
+            background: #fff;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2 {
-            color: #00bfff;
+            color: #1a1a1a;
+            font-weight: 700;
         }
 
         .meta {
-            color: #ccc;
+            color: #666;
             margin-bottom: 20px;
+            font-style: italic;
         }
 
         img {
             max-width: 100%;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin: 25px 0;
         }
 
         ul {
@@ -56,16 +57,16 @@
         a.button {
             display: inline-block;
             margin-top: 30px;
-            background: #00bfff;
+            background: #1a1a1a;
             color: white;
             padding: 12px 24px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 5px;
             font-weight: bold;
         }
 
             a.button:hover {
-                background: #009fd1;
+                background: #444;
             }
     </style>
 </head>
@@ -76,31 +77,29 @@
             <div class="meta">Project Period: April 2025 – Present</div>
             <img src="images/Screenshot (15).png" alt="AlgoTrade Screenshot">
 
-            <p>This project is a <strong>C#-based algorithmic trading strategy</strong> implementation designed to execute buy trades on financial instruments with robust risk management features such as stop loss and take profit orders.</p>
-
-            <p>Built as part of a modular trading bot framework, the strategy integrates with MetaTrader 5 and uses real-time market data to manage trades. It ensures that only one trade is open at a time, reducing risk exposure and improving return optimization.</p>
+            <p><strong>AlgoTrade</strong> is a C#-based algorithmic trading strategy built to execute intelligent buy trades with embedded risk management through stop loss and take profit mechanisms. Developed within a modular bot framework, it interfaces with MetaTrader 5 and leverages real-time market data to maintain a single open trade per instrument, enhancing efficiency and control.</p>
 
             <h2>Key Features</h2>
             <ul>
-                <li>Focused buy-side trading strategy that opens one trade at a time per instrument</li>
-                <li>Configurable stop loss and take profit levels using pip distance</li>
-                <li>Real-time market quote fetching and price calculations</li>
-                <li>Integration with MetaTrader 5 API for trade execution and management</li>
-                <li>Automated trade lifecycle: entry, exit, and adjustment</li>
-                <li>Trailing stop loss support to secure profits</li>
-                <li>Robust logging and error handling mechanisms</li>
+                <li>Single trade execution per financial instrument to manage exposure</li>
+                <li>Customizable stop loss and take profit distances in pips</li>
+                <li>Real-time price data integration and processing</li>
+                <li>Direct MetaTrader 5 API interaction for trade operations</li>
+                <li>Complete trade lifecycle automation</li>
+                <li>Optional trailing stop loss feature for profit maximization</li>
+                <li>Structured logging and fault tolerance mechanisms</li>
             </ul>
 
-            <h2>Technologies Used</h2>
+            <h2>Technologies Utilized</h2>
             <ul>
-                <li>C# and .NET for backend logic and services</li>
-                <li>MetaTrader 5 API for market integration</li>
-                <li>Asynchronous programming with async/await</li>
-                <li>Dependency Injection for scalable service management</li>
+                <li>C# and .NET framework for core application logic</li>
+                <li>MetaTrader 5 API for execution and data access</li>
+                <li>Async/await constructs for asynchronous trade operations</li>
+                <li>Dependency Injection for modular architecture</li>
             </ul>
 
             <h2>Use Case</h2>
-            <p>This strategy is perfect for developers and traders looking to automate a disciplined buy-side approach. It provides a scalable base for integrating more advanced features or building into a full trading system.</p>
+            <p>This solution is tailored for professionals seeking automated trading strategies that prioritize stability and risk-conscious operation. It is suitable as a standalone strategy or as a building block in a broader automated trading ecosystem.</p>
 
             <a href="index.html" class="button">← Back to Resume</a>
         </div>
