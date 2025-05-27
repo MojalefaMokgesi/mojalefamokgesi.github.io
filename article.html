@@ -3,167 +3,107 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog & Articles | Mojalefa Mokgesi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>AlgoTrade Strategy | Mojalefa Mokgesi</title>
     <style>
-        :root {
-            --primary-color: #0a66c2;
-            --background-overlay: rgba(0, 0, 0, 0.85);
-            --card-bg: rgba(255, 255, 255, 0.05);
-            --text-light: #f0f0f0;
-            --text-muted: #cccccc;
-        }
-
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: url('images/articlepicture.png') no-repeat center center fixed;
+            background: url('images/articlepicture(2).png') no-repeat center center fixed;
             background-size: cover;
-            color: var(--text-light);
+            color: #f5f5f5;
         }
 
-            body::before {
-                content: "";
-                position: fixed;
-                inset: 0;
-                background-color: var(--background-overlay);
-                z-index: -1;
-            }
-
-        header {
-            text-align: center;
-            padding: 60px 20px 30px;
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            min-height: 100vh;
         }
 
-            header h1 {
-                font-size: 3rem;
-                font-weight: 700;
-                color: white;
-            }
-
-            header p {
-                font-size: 1.2rem;
-                color: var(--text-muted);
-                margin-top: 10px;
-            }
-
-        .blog-container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: rgba(30, 30, 30, 0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
         }
 
-        .post {
-            background-color: var(--card-bg);
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-            backdrop-filter: blur(8px);
-            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        h1, h2 {
+            color: #00bfff;
         }
 
-            .post:hover {
-                transform: translateY(-6px);
-                box-shadow: 0 12px 24px rgba(0,0,0,0.6);
-            }
+        .meta {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
 
-            .post h2 {
-                font-size: 1.5rem;
-                margin-bottom: 10px;
-                color: var(--primary-color);
-            }
-
-            .post small {
-                display: block;
-                margin-bottom: 10px;
-                color: var(--text-muted);
-            }
-
-            .post p {
-                color: var(--text-light);
-                font-size: 0.95rem;
-            }
-
-            .post a {
-                display: inline-block;
-                margin-top: 10px;
-                color: var(--primary-color);
-                text-decoration: none;
-                font-weight: 600;
-            }
-
-                .post a:hover {
-                    text-decoration: underline;
-                }
-
-        .video-embed {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            margin-top: 10px;
+        img {
+            max-width: 100%;
             border-radius: 10px;
-            overflow: hidden;
+            margin: 20px 0;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
         }
 
-        footer {
-            text-align: center;
-            margin: 50px 0 30px;
+        ul {
+            padding-left: 20px;
         }
 
-            footer a {
-                background-color: var(--primary-color);
-                color: white;
-                padding: 12px 30px;
-                border-radius: 8px;
-                text-decoration: none;
-                font-weight: bold;
+        li {
+            margin-bottom: 10px;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 30px;
+            background: #00bfff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+            a.button:hover {
+                background: #009fd1;
             }
-
-                footer a:hover {
-                    background-color: #084a96;
-                }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Mojalefa's Blog & Vlog</h1>
-        <p>Insights, Learnings & Visuals from My Tech Journey</p>
-    </header>
+    <div class="overlay">
+        <div class="container">
+            <h1>AlgoTrade – Automated Buy Strategy</h1>
+            <div class="meta">Project Period: April 2025 – Present</div>
+            <img src="images/Screenshot (15).png" alt="AlgoTrade Screenshot">
 
-    <div class="blog-container">
-        <div class="post">
-            <h2>Building a C# Trading Bot</h2>
-            <small>Published: May 2025</small>
-            <p>Discover how I developed a currency trading algorithm using C# — from logic building to handling auto-close mechanics, loss recovery, and real-time testing.</p>
-            <a href="article.html">Read Full Article →</a>
-        </div>
+            <p>This project is a <strong>C#-based algorithmic trading strategy</strong> implementation designed to execute buy trades on financial instruments with robust risk management features such as stop loss and take profit orders.</p>
 
-        <div class="post">
-            <h2>Debugging the BuyLowSellHigh Strategy</h2>
-            <small>Published: May 2025</small>
-            <div class="video-embed">
-                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <p>A video breakdown of my debugging process for fixing stop loss and take profit issues in a custom C# strategy using MetaTrader integration.</p>
-        </div>
+            <p>Built as part of a modular trading bot framework, the strategy integrates with MetaTrader 5 and uses real-time market data to manage trades. It ensures that only one trade is open at a time, reducing risk exposure and improving return optimization.</p>
 
-        <div class="post">
-            <h2>Lessons from Early Mistakes</h2>
-            <small>Published: April 2025</small>
-            <p>My early development experiences taught me the importance of fail-safes in automation. Here's how I learned the hard way — and what I’d do differently.</p>
-            <a href="learning-lessons.html">Read Full Article →</a>
+            <h2>Key Features</h2>
+            <ul>
+                <li>Focused buy-side trading strategy that opens one trade at a time per instrument</li>
+                <li>Configurable stop loss and take profit levels using pip distance</li>
+                <li>Real-time market quote fetching and price calculations</li>
+                <li>Integration with MetaTrader 5 API for trade execution and management</li>
+                <li>Automated trade lifecycle: entry, exit, and adjustment</li>
+                <li>Trailing stop loss support to secure profits</li>
+                <li>Robust logging and error handling mechanisms</li>
+            </ul>
+
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>C# and .NET for backend logic and services</li>
+                <li>MetaTrader 5 API for market integration</li>
+                <li>Asynchronous programming with async/await</li>
+                <li>Dependency Injection for scalable service management</li>
+            </ul>
+
+            <h2>Use Case</h2>
+            <p>This strategy is perfect for developers and traders looking to automate a disciplined buy-side approach. It provides a scalable base for integrating more advanced features or building into a full trading system.</p>
+
+            <a href="index.html" class="button">← Back to Resume</a>
         </div>
     </div>
-
-    <footer>
-        <a href="index.html">← Back to Resume</a>
-    </footer>
 </body>
 </html>
