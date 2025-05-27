@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mojalefa Mokgesi | Resume</title>
-    <meta name="description" content="Resume of Mojalefa Mokgesi, a junior developer and data enthusiast specializing in C# and data science.">
-    <meta name="keywords" content="Mojalefa Mokgesi, resume, junior developer, C#, data science, cloud computing, portfolio">
+    <title>Mojalefa Mokgesi | Welcome</title>
+    <meta name="description" content="Welcome page of Mojalefa Mokgesi, a results-driven junior developer and data enthusiast.">
+    <meta name="keywords" content="Mojalefa Mokgesi, developer, portfolio, C#, data science, welcome">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -14,7 +14,7 @@
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             color: #f2f2f2;
@@ -38,121 +38,65 @@
             }
 
         header {
-            background-color: #2c2c2c;
-            color: #f2f2f2;
-            padding: 40px 20px 20px;
             text-align: center;
+            padding: 60px 20px;
         }
 
             header h1 {
-                margin: 0;
-                font-size: 2.7rem;
+                font-size: 3rem;
+                margin-bottom: 10px;
                 font-weight: 700;
             }
 
             header p {
-                margin: 8px 0;
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 font-weight: 400;
+                max-width: 700px;
+                margin: 10px auto;
             }
 
-        nav {
-            background-color: #1a1a1a;
-            padding: 12px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .highlight {
+            font-size: 1.3rem;
+            color: #00bcd4;
+            font-weight: bold;
         }
 
-            nav a {
-                color: #f2f2f2;
-                text-decoration: none;
-                margin: 0 20px;
-                font-weight: 600;
-                font-size: 1rem;
+        .section-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 60px 0;
+            flex-wrap: wrap;
+        }
+
+        .graphic-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+            .graphic-button img {
+                width: 220px;
+                height: 220px;
+                object-fit: cover;
+                border-radius: 16px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s ease-in-out;
             }
 
-                nav a:hover {
-                    text-decoration: underline;
-                }
+            .graphic-button span {
+                margin-top: 12px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-align: center;
+            }
 
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-            background-color: transparent;
-        }
-
-        h2 {
-            border-bottom: 2px solid #444;
-            padding-bottom: 5px;
-            margin-top: 50px;
-            font-size: 1.8rem;
-            font-weight: 600;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .skills span {
-            display: inline-block;
-            background-color: #333;
-            color: #f2f2f2;
-            padding: 8px 14px;
-            margin: 6px;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: transform 0.3s ease, background-color 0.3s;
-        }
-
-            .skills span:hover {
+            .graphic-button:hover img {
                 transform: scale(1.1);
-                background-color: #444;
             }
-
-        .cta {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-            .cta button {
-                background-color: #444;
-                color: #f2f2f2;
-                border: none;
-                padding: 10px 20px;
-                margin: 8px;
-                cursor: pointer;
-                border-radius: 5px;
-                font-weight: 600;
-                font-size: 1rem;
-            }
-
-                .cta button:hover {
-                    background-color: #555;
-                }
-
-        .file-buttons {
-            text-align: center;
-        }
-
-            .file-buttons button {
-                background-color: #2c2c2c;
-                color: #f2f2f2;
-                border: 2px solid #444;
-                padding: 10px;
-                margin: 12px auto;
-                width: 90%;
-                max-width: 300px;
-                border-radius: 5px;
-                font-weight: 600;
-                cursor: pointer;
-            }
-
-                .file-buttons button:hover {
-                    background-color: #3a3a3a;
-                }
 
         footer {
             text-align: center;
@@ -160,158 +104,32 @@
             color: #888;
             font-size: 0.9rem;
         }
-
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .modal-content {
-            background-color: #2c2c2c;
-            margin: 10% auto;
-            padding: 30px;
-            border: 1px solid #444;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 10px;
-            color: #f2f2f2;
-        }
-
-            .modal-content h2 {
-                margin-top: 0;
-            }
-
-            .modal-content a {
-                color: #a2c0ff;
-                text-decoration: none;
-            }
-
-                .modal-content a:hover {
-                    text-decoration: underline;
-                }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-            .close:hover {
-                color: #fff;
-            }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mojalefa Mokgesi</h1>
-        <p>Junior Developer | Data Enthusiast | Problem Solver</p>
-        <p>"Building solutions through code and curiosity."</p>
+        <h1>Welcome to the World of Mojalefa Mokgesi</h1>
+        <p class="highlight">Developer. Data Enthusiast. Creative Problem-Solver.</p>
+        <p>
+            I turn ideas into solutions. With a strong foundation in software development, real-time trading systems, and data-driven decision making,
+            I am passionate about building future-proof tech, one project at a time. Let's build something powerful together.
+        </p>
     </header>
 
-    <nav>
-        <a href="article.html">My Journal</a>
-    </nav>
-
-    <main class="container">
-        <div class="cta">
-            <button onclick="window.open('resume.pdf', '_blank')">View Resume</button>
-            <button onclick="document.getElementById('contactModal').style.display='block'">Contact Me</button>
-        </div>
-
-        <section id="about" class="section about">
-            <h2>About Me</h2>
-            <p>
-                I am a dedicated and results-driven developer with a background in data science and cloud computing.
-                Currently contributing to a real-world trading algorithm project using C#, I aim to strengthen my skills through practical experience and collaboration.
-                I thrive on solving challenges, building efficient solutions, and continuously learning within the tech ecosystem.
-            </p>
-        </section>
-
-        <section id="experience" class="section experience">
-            <h2>Experience</h2>
-            <p>
-                <strong>Voluntary Work</strong> (Apr 2025 – Present) – Orkney, North-West<br>
-                Assisting in the development of a currency trading algorithm using C# in a live financial environment.
-            </p>
-
-            <p>
-                <strong>Absolutely Perfect Water</strong> (Sep 2024 – Jan 2025) – Product Marketer<br>
-                Promoted the newly established franchise, enhanced brand visibility, and directly engaged with retailers to drive product sales.
-            </p>
-
-            <p><strong>General Worker</strong> (Jul 2024 – Sep 2024) – Water Supply and Logistics Support</p>
-        </section>
-
-        <section id="education" class="section education">
-            <h2>Education</h2>
-            <p>
-                <strong>Hoërskool Orkney</strong> (2017 – 2021)<br>
-                Completed Bachelor’s Degree Matric with key subjects including Mathematics, Computer Applications Technology, and Business.
-            </p>
-
-            <p>
-                <strong>Academic Institute of Excellence (AIE)</strong> (2023 – Present)<br>
-                Certificate: Data Science Solutions Developer (NQF5: IT Systems Development)<br>
-                Acquired practical skills in Python, R, SQL, cloud systems, and applied machine learning.
-            </p>
-        </section>
-
-        <section id="skills" class="section skills">
-            <h2>Skills</h2>
-            <div>
-                <span>C#</span>
-                <span>Python</span>
-                <span>SQL</span>
-                <span>Data Analysis</span>
-                <span>Cloud Computing</span>
-                <span>DTS</span>
-                <span>Team Collaboration</span>
-            </div>
-        </section>
-
-        <section class="file-buttons">
-            <h2>Files</h2>
-            <button onclick="window.open('files/Resume.pdf', '_blank')">📄 Resume.pdf</button>
-            <button onclick="window.open('files/ProjectDocs.zip', '_blank')">📁 ProjectDocs.zip</button>
-            <button onclick="window.open('files/LinkedInCertificate.jpg', '_blank')">📜 LinkedInCertificate.jpg</button>
-            <button onclick="window.open('files/Screenshot.png', '_blank')">🖼️ Screenshot.png</button>
-        </section>
-    </main>
-
-    <!-- Contact Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="document.getElementById('contactModal').style.display='none'">&times;</span>
-            <h2>Contact Information</h2>
-            <p><strong>Phone:</strong> +27 62 388 1570</p>
-            <p><strong>Email:</strong> <a href="mailto:mosamokgesi@gmail.com">mosamokgesi@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mmokgesi" target="_blank">linkedin.com/in/mmokgesi</a></p>
-            <p><strong>Address:</strong> 25 Longfellow Ave, Orkney, North West, 2619</p>
-        </div>
+    <div class="section-buttons">
+        <a href="experience.html" class="graphic-button">
+            <img src="images/experience.jpg" alt="Experience">
+            <span>View Experience</span>
+        </a>
+        <a href="education.html" class="graphic-button">
+            <img src="images/education.jpg" alt="Education">
+            <span>View Education</span>
+        </a>
     </div>
 
     <footer>
-        &copy; 2025 Mojalefa Mokgesi. All rights reserved.
+        &copy; 2025 Mojalefa Mokgesi. All rights reserved. <br>
+        <a href="mailto:mosamokgesi@gmail.com" style="color:#00bcd4;text-decoration:none;font-weight:600">Contact Me: mosamokgesi@gmail.com</a>
     </footer>
-
-    <script>
-        // Close modal if user clicks outside the box
-        window.onclick = function (event) {
-            const modal = document.getElementById('contactModal');
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
 </body>
 </html>
