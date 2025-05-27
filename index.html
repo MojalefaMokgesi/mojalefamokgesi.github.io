@@ -160,6 +160,55 @@
             color: #888;
             font-size: 0.9rem;
         }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #2c2c2c;
+            margin: 10% auto;
+            padding: 30px;
+            border: 1px solid #444;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            color: #f2f2f2;
+        }
+
+            .modal-content h2 {
+                margin-top: 0;
+            }
+
+            .modal-content a {
+                color: #a2c0ff;
+                text-decoration: none;
+            }
+
+                .modal-content a:hover {
+                    text-decoration: underline;
+                }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+            .close:hover {
+                color: #fff;
+            }
     </style>
 </head>
 <body>
@@ -176,7 +225,7 @@
     <main class="container">
         <div class="cta">
             <button onclick="window.open('resume.pdf', '_blank')">View Resume</button>
-            <button onclick="window.location.href='mailto:mojalefa@example.com'">Contact Me</button>
+            <button onclick="document.getElementById('contactModal').style.display='block'">Contact Me</button>
         </div>
 
         <section id="about" class="section about">
@@ -239,8 +288,31 @@
         </section>
     </main>
 
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="document.getElementById('contactModal').style.display='none'">&times;</span>
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> 062 388 1570</p>
+            <p><strong>Email:</strong> <a href="mailto:mosamokgesi@gmail.com">mosamokgesi@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mmokgesi" target="_blank">linkedin.com/in/mmokgesi</a></p>
+            <p><strong>Portfolio:</strong> <a href="https://mojalefamokgesi.github.io" target="_blank">mojalefamokgesi.github.io</a></p>
+            <p><strong>Address:</strong> 25 Longfellow Ave, Orkney, North West, 2619</p>
+        </div>
+    </div>
+
     <footer>
         &copy; 2025 Mojalefa Mokgesi. All rights reserved.
     </footer>
+
+    <script>
+        // Close modal if user clicks outside the box
+        window.onclick = function (event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
