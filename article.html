@@ -3,105 +3,112 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mojalefa's Journal</title>
+    <title>Journal Article | Mojalefa Mokgesi</title>
     <style>
         body {
             font-family: 'Georgia', serif;
-            background-color: #121212;
+            background-image: url('images/articlepicture.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: #e0e0e0;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            position: relative;
+            z-index: 0;
         }
+
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(18, 18, 18, 0.85);
+                z-index: -1;
+            }
 
         header {
-            background-color: #1f1f1f;
-            color: #fff;
             text-align: center;
             padding: 40px 20px 20px;
+            background-color: #111;
+            color: #fff;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+            header h1 {
+                margin: 0;
+                font-size: 2.5rem;
+            }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
         }
 
-        header p {
-            font-style: italic;
-            font-size: 1rem;
-            margin-top: 10px;
+        article h2 {
+            border-bottom: 2px solid #0a66c2;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            font-size: 1.6rem;
+        }
+
+        article p {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
         }
 
         nav {
-            background-color: #1f1f1f;
-            padding: 10px;
             text-align: center;
+            margin: 20px 0;
         }
 
-        nav a {
-            color: #a0c4ff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+            nav a {
+                background-color: #0a66c2;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+            }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        h2 {
-            color: #f1f1f1;
-            border-bottom: 2px solid #444;
-            padding-bottom: 5px;
-        }
-
-        article {
-            margin-top: 20px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px 0;
-            background-color: #1f1f1f;
-            color: #888;
-        }
+                nav a:hover {
+                    background-color: #084a96;
+                }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mojalefa's Journal</h1>
-        <p>Insights, Updates & Reflections from My Tech Journey</p>
+        <h1>Journal Article</h1>
+        <p>By Mojalefa Mokgesi</p>
     </header>
-
-    <nav>
-        <a href="index.html">← Back to Resume</a>
-
-    </nav>
 
     <div class="container">
         <article>
-            <h2>Becoming a Developer: Lessons from Real-World Projects</h2>
-            <p><em>Published: May 26, 2025</em></p>
+            <h2>The Evolution of My Developer Journey</h2>
             <p>
-                My journey into software development hasn't been linear — it’s been an exciting mix of formal training and self-guided exploration. Volunteering on a live currency trading bot in C# has sharpened both my technical skills and my problem-solving mindset.
+                From my early curiosity in technology to studying data science and cloud computing, my passion has always revolved around solving real-world problems.
+                This journal entry highlights the lessons, challenges, and breakthroughs I’ve experienced while contributing to a real-time C# trading algorithm project.
             </p>
+
             <p>
-                One of the biggest takeaways so far is how important clean code and logical thinking are when building something for real users. You quickly learn that coding isn’t just about making things work, but making them reliable and maintainable.
+                Learning through hands-on experiences, especially with algorithmic logic, financial APIs, and debugging strategies, has helped me grow more confident and focused as a developer.
+                My journey reflects persistence and a commitment to evolving alongside the fast-paced tech world.
             </p>
+
             <p>
-                In this journal, I’ll continue sharing breakthroughs, mistakes, and the small wins that shape my growth as a developer. Stay tuned!
+                I believe in continuous improvement, collaboration, and applying knowledge in impactful ways. Whether it's building backend services or enhancing data flow with SQL and cloud tools,
+                every challenge I solve adds depth to my career and identity as a developer.
             </p>
         </article>
-    </div>
 
-    <footer>
-        &copy; 2025 Mojalefa Mokgesi. All rights reserved.
-    </footer>
+        <nav>
+            <a href="index.html">← Back to Resume</a>
+        </nav>
+    </div>
 </body>
 </html>
