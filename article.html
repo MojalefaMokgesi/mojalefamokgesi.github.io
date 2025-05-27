@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Journal Article | Mojalefa Mokgesi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Inter', sans-serif;
             background-image: url('images/articlepicture.png');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            color: #e0e0e0;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            color: #eaeaea;
             position: relative;
             z-index: 0;
         }
@@ -26,83 +30,101 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: rgba(18, 18, 18, 0.85);
+                background-color: rgba(10, 10, 10, 0.85);
                 z-index: -1;
             }
 
         header {
             text-align: center;
-            padding: 40px 20px 20px;
-            background-color: #111;
-            color: #fff;
+            padding: 60px 20px 30px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
         }
 
             header h1 {
+                font-size: 2.8rem;
                 margin: 0;
-                font-size: 2.5rem;
+                font-weight: 600;
+            }
+
+            header p {
+                font-size: 1.1rem;
+                color: #cccccc;
+                margin-top: 10px;
             }
 
         .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 8px;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: rgba(25, 25, 25, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
         }
 
         article h2 {
-            border-bottom: 2px solid #0a66c2;
-            padding-bottom: 8px;
-            margin-top: 30px;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+            border-left: 4px solid #0a66c2;
+            padding-left: 15px;
         }
 
         article p {
             font-size: 1.05rem;
-            margin-bottom: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #dddddd;
         }
 
         nav {
             text-align: center;
-            margin: 20px 0;
+            margin-top: 40px;
         }
 
             nav a {
                 background-color: #0a66c2;
                 color: white;
-                padding: 10px 20px;
-                border-radius: 5px;
+                padding: 12px 24px;
+                border-radius: 6px;
                 text-decoration: none;
-                font-weight: bold;
+                font-weight: 600;
+                font-size: 1rem;
+                transition: background 0.3s ease;
             }
 
                 nav a:hover {
                     background-color: #084a96;
                 }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Journal Article</h1>
-        <p>By Mojalefa Mokgesi</p>
+        <h1>My Developer Journey</h1>
+        <p>Written by Mojalefa Mokgesi</p>
     </header>
 
     <div class="container">
         <article>
-            <h2>The Evolution of My Developer Journey</h2>
+            <h2>Growth Through Real-World Experience</h2>
             <p>
-                From my early curiosity in technology to studying data science and cloud computing, my passion has always revolved around solving real-world problems.
-                This journal entry highlights the lessons, challenges, and breakthroughs I’ve experienced while contributing to a real-time C# trading algorithm project.
+                My journey into software development began with a passion for building and solving. After completing formal training in data science and cloud technologies, I sought out practical experience—leading me to collaborate on a live C# trading algorithm project.
             </p>
-
             <p>
-                Learning through hands-on experiences, especially with algorithmic logic, financial APIs, and debugging strategies, has helped me grow more confident and focused as a developer.
-                My journey reflects persistence and a commitment to evolving alongside the fast-paced tech world.
+                The project challenged me to apply skills in object-oriented programming, logic flow, and real-time financial systems. It pushed me to write efficient, clean code while working as part of a small, focused development team.
             </p>
-
             <p>
-                I believe in continuous improvement, collaboration, and applying knowledge in impactful ways. Whether it's building backend services or enhancing data flow with SQL and cloud tools,
-                every challenge I solve adds depth to my career and identity as a developer.
+                With each bug fixed and feature implemented, I not only sharpened my technical ability, but also deepened my understanding of the development lifecycle—from design to deployment. This experience continues to shape the way I approach problem-solving, communication, and innovation in code.
             </p>
         </article>
 
