@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            font-size: 2rem;
+            background-color: #111;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .contact-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+        }
+
+            .contact-box p {
+                font-size: 1.2rem;
+                margin: 1rem 0;
+                line-height: 1.6;
+            }
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+        .back-link {
+            margin-top: 2rem;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+            .back-link:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        Contact Me
+    </header>
+
+    <div class="container">
+        <div class="contact-box">
+            <p><strong>Email:</strong> <a href="mailto:mosamokgesi@gmail.com">mosamokgesi@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+27623881570">+27 62 388 1570</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mmokgesi" target="_blank">linkedin.com/in/mmokgesi</a></p>
+        </div>
+
+        <a href="index.html" class="back-link">&#8592; Back to Home</a>
+    </div>
+</body>
+</html>
