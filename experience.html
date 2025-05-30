@@ -6,16 +6,20 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
+            background: url('images/experiencebackground.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #00bcd4;
+            background-color: rgba(0, 0, 0, 0.85);
             color: white;
-            padding: 1.5rem;
+            padding: 2rem;
             text-align: center;
+            font-size: 2rem;
+            letter-spacing: 1px;
         }
 
         .container {
@@ -25,20 +29,23 @@
         }
 
         .experience-item {
-            background-color: white;
+            background-color: rgba(0, 0, 0, 0.75);
             border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             margin-bottom: 1.5rem;
             overflow: hidden;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
         }
 
         .toggle {
             margin: 0;
-            padding: 1rem 1.5rem;
-            background-color: #e0f7fa;
+            padding: 1.25rem 1.5rem;
+            background-color: rgba(255, 255, 255, 0.05);
             cursor: pointer;
             position: relative;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
 
             .toggle::after {
@@ -55,9 +62,11 @@
             }
 
         .details {
-            padding: 1rem 1.5rem;
+            padding: 1.2rem 1.5rem;
             display: none;
             animation: slideDown 0.3s ease forwards;
+            font-size: 1.05rem;
+            line-height: 1.6;
         }
 
         .logo {
@@ -69,10 +78,10 @@
         .back-link {
             display: inline-block;
             margin-top: 2rem;
-            color: #00bcd4;
+            color: #ffffff;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
+            font-weight: 500;
+            font-size: 1.1rem;
         }
 
             .back-link:hover {
@@ -113,15 +122,14 @@
             <div class="details">
                 <img src="images/absolutely_perfect_water_logo.png" alt="Absolutely Perfect Water Logo" class="logo" />
                 <p><strong>Role:</strong> Product Marketer (Seasonal, On-site)</p>
-                <p>During my time promoting the newly opened Absolutely Perfect Water franchise, I focused on increasing walk-in sales and product visibility by reaching out to local shops and crafting adaptable pricing models for different customer types. I also contributed ideas for branded packaging and worked closely with the team to understand what drives customer loyalty in this space.</p>
+                <p>Promoted the newly opened franchise, boosted walk-in sales, created dynamic pricing for customer types, and pushed for branded packaging ideas. Helped shape loyalty strategies for future growth.</p>
             </div>
         </div>
 
         <div class="experience-item">
             <h2 class="toggle">AlgoTrade – Voluntary Work (Apr 2025 – Present)</h2>
             <div class="details">
-                <p>This project is a C#-based algorithmic trading strategy implementation using MetaTrader 5 and Saxo Bank's OpenAPI. I developed custom strategies like BuyLowSellHigh and MosaStrategy, built a trade management engine, and handled risk management features such as trailing stops, cooldown timers, and loss recovery.</p>
-                <p>The project taught me advanced debugging, state management, and event-driven programming.</p>
+                <p>Developed and maintained algorithmic trading bots in C# using MetaTrader 5 and Saxo OpenAPI. Built advanced features like trade state tracking, loss recovery, cooldowns, and strategy switching. This work honed my skills in C#, debugging, and financial logic systems.</p>
             </div>
         </div>
 
