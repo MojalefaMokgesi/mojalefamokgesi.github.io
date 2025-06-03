@@ -64,6 +64,27 @@
             margin-bottom: 5px;
             display: block;
         }
+
+        .expand-button {
+            background-color: #00bcd4;
+            color: #121212;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+            margin: 10px 15px 0;
+        }
+
+        .expand-content {
+            padding: 0 15px 15px;
+            display: none;
+            color: #ccc;
+        }
+
+        .expand-content.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -72,14 +93,29 @@
         This page highlights my journey building and improving my custom algorithmic trading bot using C# and MetaTrader. Each entry shows progress milestones and updates.
     </p>
     <div class="gallery">
-        
+
         <div class="photo-entry">
             <img src="20250603.png" alt="Algo Trade SL/TP Update" />
             <div class="caption">
                 <span class="date">June 3, 2025</span>
-                🚀 Big milestone today! My algorithmic trading bot is now successfully executing trades with fully integrated <strong>Stop Loss</strong> and <strong>Take Profit</strong> functionality. The system—powered by the <code>AlgoSocketThingy</code> module—is officially making smarter, risk-managed decisions on its own. Huge step forward in the journey! 📈
+                Algo Bot Milestone: SL/TP Integration Complete
+                <button class="expand-button" onclick="toggleExpand(this)">View Update</button>
+                <div class="expand-content">
+                    🚀 Big milestone today! My algorithmic trading bot is now successfully executing trades with fully integrated <strong>Stop Loss</strong> and <strong>Take Profit</strong> functionality. <br><br>
+                    The system—powered by the <code>AlgoSocketThingy</code> module—is officially making smarter, risk-managed decisions on its own. This marks a huge step forward in automation and trade safety. 📈<br><br>
+                    Feeling proud of the progress and excited to start testing more advanced logic next!
+                </div>
             </div>
         </div>
+
     </div>
+
+    <script>
+        function toggleExpand(button) {
+            const content = button.nextElementSibling;
+            content.classList.toggle("show");
+            button.textContent = content.classList.contains("show") ? "Hide Update" : "View Update";
+        }
+    </script>
 </body>
 </html>
