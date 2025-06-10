@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Skills</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --accent-color: #000000;
+      --highlight-bg: #f0f0f0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid var(--accent-color);
+      background-color: var(--highlight-bg);
+      color: var(--text-color);
+    }
+
+    #skill-summary {
+      margin-top: 20px;
+      background-color: var(--highlight-bg);
+      padding: 15px;
+      border-left: 4px solid var(--accent-color);
+      font-size: 1rem;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      select {
+        font-size: 0.9rem;
+      }
+
+      #skill-summary {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Skills</h1>
+  </header>
+
+  <main>
+    <label for="skills">Select a skill:</label>
+    <select id="skills" aria-label="Skill dropdown">
+      <option value="">-- Choose a skill --</option>
+      <option value="dataManipulation">Data Manipulation</option>
+      <option value="databaseManagement">Database Management</option>
+      <option value="dataMining">Data Mining Skills</option>
+      <option value="solutionDevelopment">Solution Development</option>
+      <option value="financialMarkets">Financial Markets</option>
+    </select>
+
+    <div id="skill-summary" role="region" aria-live="polite"></div>
+  </main>
+
+  <script>
+    const skillSummary = {
+      dataManipulation: "I gained data manipulation skills through coursework and hands-on projects in data science. I used tools like Python (Pandas) and Excel to clean, transform, and analyze large datasets.",
+      databaseManagement: "My experience managing databases comes from both academic training and real-world projects. I’ve worked with MySQL and PostgreSQL to design schemas and optimize queries.",
+      dataMining: "I developed data mining skills by completing modules in my data science program and conducting independent research projects using tools like Weka and scikit-learn.",
+      solutionDevelopment: "Solution development is a strength I honed during collaborative work and freelancing, where I built end-to-end solutions to real-world problems using software engineering principles.",
+      financialMarkets: "I developed a strong understanding of financial markets through self-study, simulated trading, and analysis of market trends using both technical and fundamental indicators."
+    };
+
+    const select = document.getElementById('skills');
+    const summaryDiv = document.getElementById('skill-summary');
+
+    select.addEventListener('change', () => {
+      const selected = select.value;
+      if (skillSummary[selected]) {
+        summaryDiv.style.display = 'block';
+        summaryDiv.textContent = skillSummary[selected];
+      } else {
+        summaryDiv.style.display = 'none';
+        summaryDiv.textContent = '';
+      }
+    });
+  </script>
+</body>
+</html>
