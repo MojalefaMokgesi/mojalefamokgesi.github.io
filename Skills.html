@@ -6,83 +6,95 @@
   <title>My Skills</title>
   <style>
     :root {
-      --bg-color: #ffffff;
-      --text-color: #000000;
-      --accent-color: #000000;
-      --highlight-bg: rgba(255, 255, 255, 0.8);
+      --bg-color: #1e1e1e;
+      --text-color: #f0f0f0;
+      --accent-color: #888888;
+      --highlight-bg: #2a2a2a;
     }
 
     body {
-  background-image: url('images/SkillsBg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
- 
-  background-color: #000000;
+      background-image: url('images/SkillsBg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #000000;
+      color: var(--text-color);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      position: relative;
+    }
 
-  color: var(--text-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh; 
-  position: relative;
-}
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+      z-index: 0;
+    }
 
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(255, 255, 255, 0.85); 
-  pointer-events: none;
-  z-index: 0;
-}
-
-header, main {
-  position: relative;
-  z-index: 1;
-}
-
-
-main {
-  background: var(--bg-color); 
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-    label, select, #skill-summary {
+    header, main {
       position: relative;
       z-index: 1;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--text-color);
+    }
+
+    main {
+      background: var(--bg-color);
+      width: 100%;
+      max-width: 600px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transition: background 0.3s ease;
     }
 
     label {
-      font-weight: bold;
+      font-weight: 600;
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      color: var(--text-color);
     }
 
     select {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       font-size: 1rem;
       border: 2px solid var(--accent-color);
+      border-radius: 6px;
       background-color: var(--highlight-bg);
       color: var(--text-color);
+      outline: none;
+      transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+    select:focus {
+      border-color: #aaa;
+      background-color: #333;
     }
 
     #skill-summary {
-      margin-top: 20px;
+      margin-top: 25px;
       background-color: var(--highlight-bg);
-      padding: 15px;
+      padding: 18px;
       border-left: 4px solid var(--accent-color);
       font-size: 1rem;
+      border-radius: 4px;
       display: none;
+      color: var(--text-color);
+      transition: all 0.3s ease;
     }
 
     @media (max-width: 600px) {
@@ -90,8 +102,12 @@ main {
         font-size: 2rem;
       }
 
+      main {
+        padding: 20px;
+      }
+
       select {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
       }
 
       #skill-summary {
