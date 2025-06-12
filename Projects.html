@@ -3,123 +3,53 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mojalefa Mokgesi | Web Development Projects</title>
+    <title>Elite Pomodoro | Download</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
             background: #121212;
             color: #f2f2f2;
             margin: 0;
-            padding: 20px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         h1 {
-            text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
-        p.intro {
-            text-align: center;
+        p {
             font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            color: #bbb;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .photo-entry {
-            background: #1e1e1e;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-            overflow: hidden;
-            transition: transform 0.2s;
-        }
-
-        .photo-entry:hover {
-            transform: scale(1.02);
-        }
-
-        .caption {
-            padding: 15px;
-            font-size: 15px;
             color: #ccc;
+            max-width: 600px;
+            margin-bottom: 40px;
         }
 
-        .date {
-            font-weight: bold;
-            font-size: 17px;
-            color: #00bcd4;
-            margin-bottom: 5px;
-            display: block;
-        }
-
-        .expand-button {
+        .download-button {
             background-color: #00bcd4;
             color: #121212;
             border: none;
-            padding: 12px 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 15px;
-            margin: 10px 15px 0;
-        }
-
-        .expand-content {
-            padding: 0 15px 15px;
-            display: none;
-            color: #ccc;
-        }
-
-        .expand-content img {
-            width: 100%;
-            height: auto;
+            padding: 15px 30px;
             border-radius: 8px;
-            margin-bottom: 15px;
-            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
         }
 
-        .expand-content.show {
-            display: block;
+        .download-button:hover {
+            background-color: #00acc1;
         }
     </style>
 </head>
 <body>
-    <h1>Web Development Project Portfolio</h1>
-    <p class="intro">
-        This page showcases the web-based projects I’ve completed — from personal portfolio sites and front-end design to full-stack application development. Click any entry to explore the progress and details.
-    </p>
-    <div class="gallery">
-
-        <div class="photo-entry">
-            <div class="caption">
-                <span class="date">June 10, 2025</span>
-                Portfolio Website Launched
-                <button class="expand-button" onclick="toggleExpand(this)">View Update</button>
-                <div class="expand-content">
-                    <img src="images/portfolio-launch.png" alt="Portfolio Launch Screenshot" />
-                    🎉 Launched my personal portfolio site built with HTML, CSS, and a touch of JavaScript for interactivity.<br><br>
-                    Responsive design, dark mode support, and GitHub integration for open-sourcing my projects. Really proud of how clean and functional the UI turned out!<br><br>
-                    More updates to come as I add download links and interactive project demos.
-                </div>
-            </div>
-        </div>
-
-        <!-- Add more entries here -->
-
-    </div>
-
-    <script>
-        function toggleExpand(button) {
-            const content = button.nextElementSibling;
-            content.classList.toggle("show");
-            button.textContent = content.classList.contains("show") ? "Hide Update" : "View Update";
-        }
-    </script>
+    <h1>Elite Pomodoro App</h1>
+    <p>Boost your focus and productivity using the proven Pomodoro technique. Download the lightweight Elite Pomodoro desktop timer now.</p>
+    <a href="https://encr.pw/rf5vX" class="download-button" download>⬇️ Download Elite Pomodoro (.exe)</a>
 </body>
 </html>
