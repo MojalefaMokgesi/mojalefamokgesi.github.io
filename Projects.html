@@ -3,43 +3,74 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elite Pomodoro | Download</title>
+    <title>Mojalefa Mokgesi | Project Downloads</title>
     <style>
         body {
             font-family: 'Inter', sans-serif;
             background: #121212;
             color: #f2f2f2;
             margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            padding: 20px;
         }
 
         h1 {
+            text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
-        p {
+        p.intro {
+            text-align: center;
             font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #bbb;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .photo-entry {
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .photo-entry:hover {
+            transform: scale(1.02);
+        }
+
+        .caption {
+            padding: 15px;
+            font-size: 15px;
             color: #ccc;
-            max-width: 600px;
-            margin-bottom: 40px;
+        }
+
+        .date {
+            font-weight: bold;
+            font-size: 17px;
+            color: #00bcd4;
+            margin-bottom: 5px;
+            display: block;
         }
 
         .download-button {
             background-color: #00bcd4;
             color: #121212;
             border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: bold;
+            padding: 12px 18px;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 15px;
+            margin-top: 15px;
+            display: inline-block;
             text-decoration: none;
-            transition: background 0.3s;
+            font-weight: bold;
         }
 
         .download-button:hover {
@@ -48,8 +79,22 @@
     </style>
 </head>
 <body>
-    <h1>Elite Pomodoro App</h1>
-    <p>Boost your focus and productivity using the proven Pomodoro technique. Download the lightweight Elite Pomodoro desktop timer now.</p>
-    <a href="https://encr.pw/rf5vX" class="download-button" download>⬇️ Download Elite Pomodoro (.exe)</a>
+    <h1>Download Center</h1>
+    <p class="intro">
+        Here you can download my completed projects. Below is the Elite Pomodoro App – a productivity timer built using the Pomodoro technique.
+    </p>
+
+    <div class="gallery">
+        <div class="photo-entry">
+            <div class="caption">
+                <span class="date">June 12, 2025</span>
+                🕒 Elite Pomodoro: Boost Focus & Beat Procrastination
+                <br><br>
+                A simple desktop app that helps you stay productive by breaking your work into focused Pomodoro intervals (25min work, 5min break). No distractions, just results.
+                <br><br>
+                <a href="https://encr.pw/rf5vX" class="download-button" download>⬇️ Download EXE</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
