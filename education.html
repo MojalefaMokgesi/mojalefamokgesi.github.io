@@ -21,41 +21,89 @@
 
         h1 {
             font-size: 2.8rem;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             text-align: center;
         }
 
         .school {
-            background-color: #1e1e1e;
-            padding: 20px;
-            margin-bottom: 20px;
+            background-color: rgba(0, 0, 0, 0.75);
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
         }
 
-            .school h2 {
-                margin: 0 0 5px;
-                font-size: 1.5rem;
-            }
+        .school-header {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 1.25rem 1.5rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            position: relative;
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
 
-            .school p {
-                margin: 5px 0;
-            }
+        .school-header img {
+            width: 60px;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+
+        .school-header::after {
+            content: "▼";
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+        }
+
+        .school-header.open::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .school-details {
+            padding: 1.2rem 1.5rem;
+            display: none;
+            animation: slideDown 0.3s ease forwards;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .school-details p {
+            margin: 5px 0;
+        }
 
         .back-link {
             text-align: center;
             margin-top: 30px;
         }
 
-            .back-link a {
-                color: #00bcd4;
-                text-decoration: none;
-                font-weight: bold;
+        .back-link a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                max-height: 0;
             }
 
-                .back-link a:hover {
-                    text-decoration: underline;
-                }
+            to {
+                opacity: 1;
+                max-height: 1000px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -63,21 +111,55 @@
         <h1>Education</h1>
 
         <div class="school">
-            <h2>Academic Institute of Excellence (AIE)</h2>
-            <p><strong>2023 – Present</strong></p>
-            <p>Certificate: Data Science Solutions Developer (NQF5: IT Systems Development)</p>
-            <p>Acquired practical skills in Python, R, SQL, cloud systems, and applied machine learning.</p>
+            <div class="school-header" onclick="toggleDetails(this)">
+                <img src="images/AIE.png" alt="AIE Logo">
+                Academic Institute of Excellence (AIE) - 2024
+            </div>
+            <div class="school-details">
+                <p><strong>National Certificate: IT Systems Developer (NQF5 - Big Data Engineering and Analytics)</strong></p>
+                <p>Focused on software development, databases, and data engineering using industry tools and methodologies.</p>
+            </div>
         </div>
 
         <div class="school">
-            <h2>Hoërskool Orkney</h2>
-            <p><strong>2017 – 2021</strong></p>
-            <p>Completed Bachelor’s Degree Matric with key subjects: Mathematics, CAT, Business, Hospitality, English, Afrikaans.</p>
+            <div class="school-header" onclick="toggleDetails(this)">
+                <img src="images/AIE.png" alt="AIE Logo">
+                Academic Institute of Excellence (AIE) - 2023
+            </div>
+            <div class="school-details">
+                <p><strong>Certificate: Data Science Solutions Developer</strong></p>
+                <p>Practical training in Python, R, SQL, cloud systems, and applied machine learning.</p>
+            </div>
+        </div>
+
+        <div class="school">
+            <div class="school-header" onclick="toggleDetails(this)">
+                <img src="images/OHS.png" alt="Hoërskool Orkney Logo">
+                Hoërskool Orkney - 2017 to 2021
+            </div>
+            <div class="school-details">
+                <p><strong>Bachelor’s Degree Matric</strong></p>
+                <p>Key subjects: Mathematics, CAT, Business, Hospitality, English, Afrikaans.</p>
+            </div>
         </div>
 
         <div class="back-link">
             <a href="index.html">&larr; Back to Welcome Page</a>
         </div>
     </div>
+
+    <script>
+        function toggleDetails(header) {
+            const isOpen = header.classList.contains('open');
+
+            document.querySelectorAll('.school-header').forEach(h => h.classList.remove('open'));
+            document.querySelectorAll('.school-details').forEach(d => d.style.display = 'none');
+
+            if (!isOpen) {
+                header.classList.add('open');
+                header.nextElementSibling.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
