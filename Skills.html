@@ -93,6 +93,7 @@
       display: none;
       color: var(--text-color);
       box-sizing: border-box;
+      white-space: pre-wrap;
     }
 
     @media (max-width: 600px) {
@@ -137,11 +138,52 @@
 
   <script>
     const skillSummary = {
-      dataManipulation: "In 2023, I completed a one-year Data Science Certificate at the Academic Institute of Excellence (AIE), and it was one of the most eye-opening learning experiences I've had. Throughout the year, I really got to roll up my sleeves and work hands-on with data — not just theory, but real-world projects that pushed me to think critically and problem-solve. I became comfortable using Python, especially libraries like Pandas, NumPy, Matplotlib, and Seaborn to clean, shape, and analyze data. At first, writing code to explore and visualize data felt challenging, but with practice, it became something I genuinely enjoyed. I also worked with Microsoft Excel, using its formulas, pivot tables, and charts to make sense of datasets from different angles.One project I remember clearly involved working with the AdventureWorks sample database. It was my first serious dive into SQL, and it taught me how powerful structured queries can be for pulling meaningful information from complex datasets. I learned how to join tables, filter results, and even build reports from raw data — skills that I still use and improve on today. What I appreciated most about this journey was learning how to spot patterns, clean messy data, and turn numbers into insights. I also learned how to explain those insights clearly — whether through charts, reports, or just talking someone through the story the data is telling. This experience didn’t just give me technical skills — it helped shape the way I think about solving problems and working with information.",
-      databaseManagement: "My experience managing databases comes from both academic training and real-world projects. I’ve worked with MySQL and PostgreSQL to design schemas and optimize queries.",
-      dataMining: "I developed data mining skills by completing modules in my data science program and conducting independent research projects using tools like Weka and scikit-learn.",
-      solutionDevelopment: "Solution development is a strength I honed during collaborative work and freelancing, where I built end-to-end solutions to real-world problems using software engineering principles.",
-      financialMarkets: "I developed a strong understanding of financial markets through self-study, simulated trading, and analysis of market trends using both technical and fundamental indicators."
+      dataManipulation:
+`In 2023, I completed a one-year Data Science Certificate at the Academic Institute of Excellence (AIE), which was a highly rewarding and practical learning experience.
+
+Throughout the program, I engaged deeply with real-world data projects that challenged me to develop hands-on skills rather than just theoretical knowledge. I became proficient in using Python, especially libraries such as Pandas, NumPy, Matplotlib, and Seaborn to clean, transform, and analyze data.
+
+Alongside Python, I utilized Microsoft Excel extensively—employing formulas, pivot tables, and charts to dissect data from multiple perspectives.
+
+A notable project involved the AdventureWorks sample database, where I learned to write complex SQL queries for data extraction and reporting. This experience taught me how to join tables, filter data, and aggregate results effectively.
+
+Most importantly, this journey helped me develop a strong analytical mindset, enabling me to identify patterns, clean messy data, and communicate insights clearly through visualizations and reports. These skills have become integral to how I approach problem-solving with data.`,
+
+      databaseManagement:
+`My experience with database management combines both formal education and practical application.
+
+During my Data Science Certificate program, I worked extensively with relational database systems such as MySQL and PostgreSQL. I learned to design efficient database schemas, write optimized SQL queries, and ensure data integrity through normalization and indexing.
+
+Beyond coursework, I applied these skills in project settings where I built and managed databases to support data analysis and reporting needs.
+
+This solid foundation has equipped me to understand both the structural and operational aspects of databases, allowing me to manage data effectively and support data-driven decision-making.`,
+
+      dataMining:
+`I developed my data mining capabilities through a combination of academic modules and independent research projects.
+
+Using tools like Weka and Python’s scikit-learn library, I explored techniques such as classification, clustering, and association rule mining. These projects required me to preprocess datasets, select appropriate algorithms, and evaluate model performance critically.
+
+The practical exposure helped me understand how to uncover hidden patterns and relationships within data, which is essential for building predictive models and making informed decisions.
+
+This hands-on experience strengthened my ability to translate complex data into actionable insights.`,
+
+      solutionDevelopment:
+`Solution development is an area where I thrive by applying both technical skills and problem-solving abilities.
+
+Through collaborative projects and freelance work, I have designed and implemented end-to-end software solutions tailored to address real-world challenges.
+
+I apply software engineering principles to ensure solutions are robust, maintainable, and scalable. From requirements gathering and system design to coding and testing, I take a comprehensive approach to delivering effective results.
+
+This process has sharpened my adaptability and creativity, allowing me to craft solutions that meet user needs while aligning with business goals.`,
+
+      financialMarkets:
+`My understanding of financial markets stems from a strong personal interest combined with disciplined self-study.
+
+I have engaged in simulated trading environments to practice technical and fundamental analysis, applying indicators and strategies to track market trends.
+
+Analyzing market behavior has deepened my insight into how economic factors, news events, and investor psychology influence asset prices.
+
+This knowledge complements my data analysis skills and gives me a broader perspective on applying data-driven approaches in financial contexts.`
     };
 
     const select = document.getElementById('skills');
