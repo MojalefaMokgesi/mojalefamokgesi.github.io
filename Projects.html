@@ -17,6 +17,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 10px;
+            color: #00bcd4;
         }
 
         p.intro {
@@ -107,41 +108,60 @@
 </head>
 <body>
 
-  <h1 style="text-align:center; margin-bottom: 30px; color:#00bcd4;">
+  <h1 style="text-align:center; margin-bottom: 30px;">
     Download Hub
   </h1>
-        <!-- Pomodoro App Entry -->
-        <div class="photo-entry">
-            <div class="caption">
-                <span class="date">June 12, 2025</span>
-                <strong>Elite Pomodoro Timer</strong>
-                <button class="expand-button" onclick="toggleExpand(this)">Learn More</button>
-                <div class="expand-content">
-                    <p><strong>In today’s fast-paced world</strong>, staying focused and managing time effectively is more challenging than ever. One time-tested method that continues to help people boost productivity and maintain mental clarity is the <strong>Pomodoro Technique</strong>.</p>
-                    
-                    <p><strong>Developed by Francesco Cirillo</strong> in the late 1980s, this method breaks work into structured intervals known as "Pomodoros"—typically 25 minutes of focused work followed by a 5-minute break. After completing four Pomodoros, a longer break of 15 to 30 minutes is taken to reset and recharge.</p>
-                    
-                    <p>What makes the Pomodoro Technique so effective is its simplicity and psychological impact. The ticking timer creates a sense of urgency, enhancing focus and reducing the temptation to procrastinate. Regular breaks prevent burnout by giving your brain a moment to rest, especially during long work sessions.</p>
-                    
-                    <p>It also increases your awareness of time, helping you better estimate how long tasks take and refine your scheduling habits. Most importantly, completing these short, focused intervals creates a sense of momentum and accomplishment that fuels ongoing productivity.</p>
 
-                    <p><strong>To get started</strong>, choose a task and set a timer for 25 minutes. Work on that task without interruption until the timer rings. Then take a 5-minute break to relax. Repeat this cycle four times, and after the fourth Pomodoro, take a longer break. This structured approach transforms your workday into manageable chunks, helping you stay focused, energized, and in control.</p>
+  <div class="gallery">
+    <!-- Pomodoro App Entry -->
+    <div class="photo-entry">
+        <div class="caption">
+            <span class="date">June 12, 2025</span>
+            <strong>Elite Pomodoro Timer</strong>
+            <button class="expand-button" onclick="toggleExpand(this)">Learn More</button>
+            <div class="expand-content">
+                <p><strong>In today’s fast-paced world</strong>, staying focused and managing time effectively is more challenging than ever. One time-tested method that continues to help people boost productivity and maintain mental clarity is the <strong>Pomodoro Technique</strong>.</p>
+                
+                <p><strong>Developed by Francesco Cirillo</strong> in the late 1980s, this method breaks work into structured intervals known as "Pomodoros"—typically 25 minutes of focused work followed by a 5-minute break. After completing four Pomodoros, a longer break of 15 to 30 minutes is taken to reset and recharge.</p>
+                
+                <p>What makes the Pomodoro Technique so effective is its simplicity and psychological impact. The ticking timer creates a sense of urgency, enhancing focus and reducing the temptation to procrastinate. Regular breaks prevent burnout by giving your brain a moment to rest, especially during long work sessions.</p>
+                
+                <p>It also increases your awareness of time, helping you better estimate how long tasks take and refine your scheduling habits. Most importantly, completing these short, focused intervals creates a sense of momentum and accomplishment that fuels ongoing productivity.</p>
 
-                    <hr style="border-color: #444; margin: 20px 0;">
-                    
-                    <a href="https://github.com/MojalefaMokgesi/mojalefamokgesi.github.io/releases/download/1.0.0/ElitePomodoroApp.zip" class="download-button" download>⬇️ Download Elite Pomodoro (EXE)</a>
-                </div>
+                <p><strong>To get started</strong>, choose a task and set a timer for 25 minutes. Work on that task without interruption until the timer rings. Then take a 5-minute break to relax. Repeat this cycle four times, and after the fourth Pomodoro, take a longer break. This structured approach transforms your workday into manageable chunks, helping you stay focused, energized, and in control.</p>
+
+                <hr style="border-color: #444; margin: 20px 0;">
+                
+                <a href="https://github.com/MojalefaMokgesi/mojalefamokgesi.github.io/releases/download/1.0.0/ElitePomodoroApp.zip" class="download-button" download>⬇️ Download Elite Pomodoro (EXE)</a>
             </div>
         </div>
-
     </div>
 
-    <script>
-        function toggleExpand(button) {
-            const content = button.nextElementSibling;
-            content.classList.toggle("show");
-            button.textContent = content.classList.contains("show") ? "Hide Details" : "Learn More";
-        }
-    </script>
+    <!-- SA ID Validator App Entry -->
+    <div class="photo-entry">
+        <div class="caption">
+            <span class="date">June 19, 2025</span>
+            <strong>South African ID Validator</strong>
+            <button class="expand-button" onclick="toggleExpand(this)">Learn More</button>
+            <div class="expand-content">
+                <p>
+                    The South African ID Validator is a desktop application designed to validate South African ID numbers accurately.
+                    It verifies format, date of birth, gender, citizenship, and checksum according to government specifications.
+                    This tool is ideal for offline verification in organizations and businesses requiring quick and reliable ID validation.
+                </p>
+                <hr style="border-color: #444; margin: 20px 0;">
+                <a href="https://github.com/MojalefaMokgesi/mojalefamokgesi.github.io/releases/download/v1.0.0/SA.ID.Validator.zip" class="download-button" download>⬇️ Download SA ID Validator (ZIP)</a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script>
+      function toggleExpand(button) {
+          const content = button.nextElementSibling;
+          content.classList.toggle("show");
+          button.textContent = content.classList.contains("show") ? "Hide Details" : "Learn More";
+      }
+  </script>
 </body>
 </html>
