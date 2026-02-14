@@ -2,225 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #1e1e1e;
-      --text-color: #f0f0f0;
-      --accent-color: #888888;
-      --highlight-bg: #2a2a2a;
-    }
-
     body {
-      background-image: url('images/SkillsBg.png');
+      font-family: 'Inter', sans-serif;
+      background: url('images/SkillsBg.png') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #000000;
-      color: var(--text-color);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
       margin: 0;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      position: relative;
+      padding: 0;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.6);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    header, main, #skill-summary {
-      position: relative;
-      z-index: 1;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: var(--text-color);
+    header {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 2rem;
       text-align: center;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
     }
 
-    main {
-      background: var(--bg-color);
-      width: 100%;
-      max-width: 600px;
-      padding: 30px;
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .skill-item {
+      background-color: rgba(0, 0, 0, 0.75);
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     }
 
-    label {
+    .toggle {
+      margin: 0;
+      padding: 1.25rem 1.5rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      cursor: pointer;
+      position: relative;
+      font-size: 1.25rem;
       font-weight: 600;
-      display: block;
-      margin-bottom: 12px;
-      font-size: 1.1rem;
-      color: var(--text-color);
+      letter-spacing: 0.5px;
     }
 
-    select {
-      width: 100%;
-      padding: 12px;
-      font-size: 1rem;
-      border: 2px solid var(--accent-color);
-      border-radius: 6px;
-      background-color: var(--highlight-bg);
-      color: var(--text-color);
-      outline: none;
+    .toggle::after {
+      content: "▼";
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease;
     }
 
-    select:focus {
-      border-color: #aaa;
-      background-color: #333;
+    .toggle.open::after {
+      transform: translateY(-50%) rotate(180deg);
     }
 
-    #skill-summary {
-      margin-top: 30px;
-      width: 100vw;
-      padding: 20px;
-      background-color: var(--highlight-bg);
-      border-left: 6px solid var(--accent-color);
-      font-size: 1rem;
+    .details {
+      padding: 1.2rem 1.5rem;
       display: none;
-      color: var(--text-color);
-      box-sizing: border-box;
+      animation: slideDown 0.3s ease forwards;
+      font-size: 1.05rem;
+      line-height: 1.6;
       white-space: pre-wrap;
     }
 
     .back-link {
       text-align: center;
-      margin: 30px 0 0 0;
-      width: 100%;
-      max-width: 600px;
-      z-index: 1;
+      margin: 30px 0;
     }
 
     .back-link a {
       color: #00bcd4;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1rem;
     }
 
     .back-link a:hover {
       text-decoration: underline;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        max-height: 0;
       }
-
-      main {
-        padding: 20px;
-      }
-
-      select {
-        font-size: 0.95rem;
-      }
-
-      #skill-summary {
-        font-size: 0.95rem;
+      to {
+        opacity: 1;
+        max-height: 1000px;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>My Skills</h1>
   </header>
 
-  <main>
-    <label for="skills">Select a skill:</label>
-    <select id="skills" aria-label="Skill dropdown">
-      <option value="">-- Choose a skill --</option>
-      <option value="dataManipulation">Data Manipulation</option>
-      <option value="databaseManagement">Database Management</option>
-      <option value="dataMining">Data Mining Skills</option>
-      <option value="solutionDevelopment">Solution Development</option>
-      <option value="financialMarkets">Financial Markets</option>
-    </select>
-  </main>
+  <div class="container">
+    <div class="skill-item">
+      <h2 class="toggle">Data Manipulation</h2>
+      <div class="details">
+        In 2023, I completed a one-year Data Science Certificate at the Academic Institute of Excellence (AIE), which was a highly rewarding and practical learning experience.
 
-  <!-- Moved outside <main> for full-width effect -->
-  <div id="skill-summary" role="region" aria-live="polite"></div>
+        Throughout the program, I engaged deeply with real-world data projects that challenged me to develop hands-on skills rather than just theoretical knowledge. I became proficient in using Python, especially libraries such as Pandas, NumPy, Matplotlib, and Seaborn to clean, transform, and analyze data.
 
-  <div class="back-link">
-    <a href="index.html">&larr; Back to Home Page</a>
+        Alongside Python, I utilized Microsoft Excel extensively—employing formulas, pivot tables, and charts to dissect data from multiple perspectives.
+
+        A notable project involved the AdventureWorks sample database, where I learned to write complex SQL queries for data extraction and reporting. This experience taught me how to join tables, filter data, and aggregate results effectively.
+
+        Most importantly, this journey helped me develop a strong analytical mindset, enabling me to identify patterns, clean messy data, and communicate insights clearly through visualizations and reports. These skills have become integral to how I approach problem-solving with data.
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <h2 class="toggle">Database Management</h2>
+      <div class="details">
+        My experience with database management combines both formal education and practical application.
+
+        During my Data Science Certificate program, I worked extensively with relational database systems such as MySQL and PostgreSQL. I learned to design efficient database schemas, write optimized SQL queries, and ensure data integrity through normalization and indexing.
+
+        Beyond coursework, I applied these skills in project settings where I built and managed databases to support data analysis and reporting needs.
+
+        This solid foundation has equipped me to understand both the structural and operational aspects of databases, allowing me to manage data effectively and support data-driven decision-making.
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <h2 class="toggle">Data Mining Skills</h2>
+      <div class="details">
+        I developed my data mining capabilities through a combination of academic modules and independent research projects.
+
+        Using tools like Weka and Python’s scikit-learn library, I explored techniques such as classification, clustering, and association rule mining. These projects required me to preprocess datasets, select appropriate algorithms, and evaluate model performance critically.
+
+        The practical exposure helped me understand how to uncover hidden patterns and relationships within data, which is essential for building predictive models and making informed decisions.
+
+        This hands-on experience strengthened my ability to translate complex data into actionable insights.
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <h2 class="toggle">Solution Development</h2>
+      <div class="details">
+        Solution development is an area where I thrive by applying both technical skills and problem-solving abilities.
+
+        Through collaborative projects and freelance work, I have designed and implemented end-to-end software solutions tailored to address real-world challenges.
+
+        I apply software engineering principles to ensure solutions are robust, maintainable, and scalable. From requirements gathering and system design to coding and testing, I take a comprehensive approach to delivering effective results.
+
+        This process has sharpened my adaptability and creativity, allowing me to craft solutions that meet user needs while aligning with business goals.
+      </div>
+    </div>
+
+    <div class="skill-item">
+      <h2 class="toggle">Financial Markets</h2>
+      <div class="details">
+        My understanding of financial markets stems from a strong personal interest combined with disciplined self-study.
+
+        I have engaged in simulated trading environments to practice technical and fundamental analysis, applying indicators and strategies to track market trends.
+
+        Analyzing market behavior has deepened my insight into how economic factors, news events, and investor psychology influence asset prices.
+
+        This knowledge complements my data analysis skills and gives me a broader perspective on applying data-driven approaches in financial contexts.
+      </div>
+    </div>
+
+    <div class="back-link">
+      <a href="index.html">&larr; Back to Home Page</a>
+    </div>
   </div>
 
   <script>
-    const skillSummary = {
-      dataManipulation:
-`In 2023, I completed a one-year Data Science Certificate at the Academic Institute of Excellence (AIE), which was a highly rewarding and practical learning experience.
+    document.querySelectorAll('.toggle').forEach(header => {
+      header.addEventListener('click', () => {
+        const details = header.nextElementSibling;
+        const isOpen = header.classList.contains('open');
 
-Throughout the program, I engaged deeply with real-world data projects that challenged me to develop hands-on skills rather than just theoretical knowledge. I became proficient in using Python, especially libraries such as Pandas, NumPy, Matplotlib, and Seaborn to clean, transform, and analyze data.
+        document.querySelectorAll('.toggle').forEach(h => h.classList.remove('open'));
+        document.querySelectorAll('.details').forEach(d => d.style.display = 'none');
 
-Alongside Python, I utilized Microsoft Excel extensively—employing formulas, pivot tables, and charts to dissect data from multiple perspectives.
-
-A notable project involved the AdventureWorks sample database, where I learned to write complex SQL queries for data extraction and reporting. This experience taught me how to join tables, filter data, and aggregate results effectively.
-
-Most importantly, this journey helped me develop a strong analytical mindset, enabling me to identify patterns, clean messy data, and communicate insights clearly through visualizations and reports. These skills have become integral to how I approach problem-solving with data.`,
-
-      databaseManagement:
-`My experience with database management combines both formal education and practical application.
-
-During my Data Science Certificate program, I worked extensively with relational database systems such as MySQL and PostgreSQL. I learned to design efficient database schemas, write optimized SQL queries, and ensure data integrity through normalization and indexing.
-
-Beyond coursework, I applied these skills in project settings where I built and managed databases to support data analysis and reporting needs.
-
-This solid foundation has equipped me to understand both the structural and operational aspects of databases, allowing me to manage data effectively and support data-driven decision-making.`,
-
-      dataMining:
-`I developed my data mining capabilities through a combination of academic modules and independent research projects.
-
-Using tools like Weka and Python’s scikit-learn library, I explored techniques such as classification, clustering, and association rule mining. These projects required me to preprocess datasets, select appropriate algorithms, and evaluate model performance critically.
-
-The practical exposure helped me understand how to uncover hidden patterns and relationships within data, which is essential for building predictive models and making informed decisions.
-
-This hands-on experience strengthened my ability to translate complex data into actionable insights.`,
-
-      solutionDevelopment:
-`Solution development is an area where I thrive by applying both technical skills and problem-solving abilities.
-
-Through collaborative projects and freelance work, I have designed and implemented end-to-end software solutions tailored to address real-world challenges.
-
-I apply software engineering principles to ensure solutions are robust, maintainable, and scalable. From requirements gathering and system design to coding and testing, I take a comprehensive approach to delivering effective results.
-
-This process has sharpened my adaptability and creativity, allowing me to craft solutions that meet user needs while aligning with business goals.`,
-
-      financialMarkets:
-`My understanding of financial markets stems from a strong personal interest combined with disciplined self-study.
-
-I have engaged in simulated trading environments to practice technical and fundamental analysis, applying indicators and strategies to track market trends.
-
-Analyzing market behavior has deepened my insight into how economic factors, news events, and investor psychology influence asset prices.
-
-This knowledge complements my data analysis skills and gives me a broader perspective on applying data-driven approaches in financial contexts.`
-    };
-
-    const select = document.getElementById('skills');
-    const summaryDiv = document.getElementById('skill-summary');
-
-    select.addEventListener('change', () => {
-      const selected = select.value;
-      if (skillSummary[selected]) {
-        summaryDiv.style.display = 'block';
-        summaryDiv.textContent = skillSummary[selected];
-      } else {
-        summaryDiv.style.display = 'none';
-        summaryDiv.textContent = '';
-      }
+        if (!isOpen) {
+          header.classList.add('open');
+          details.style.display = 'block';
+        }
+      });
     });
   </script>
 </body>
