@@ -1,196 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>My Skills</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: url('images/SkillsBg.png') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience | Logic Lab Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #faf6f1;
+            --surface: #fffaf4;
+            --surface-soft: #f5efe6;
+            --surface-dark: #e8ddd0;
+            --text: #3e2a10;
+            --muted: #755d3c;
+            --brand: #6b4c28;
+            --border: rgba(107, 76, 40, 0.16);
+            --shadow: 0 16px 35px rgba(107, 76, 40, 0.14);
+        }
 
-    header {
-      background-color: rgba(0, 0, 0, 0.85);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #faf6f1;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
 
-    .skill-item {
-      background-color: rgba(0, 0, 0, 0.75);
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
-      overflow: hidden;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-    }
+        header {
+            background: #f5efe6;
+            color: var(--text);
+            padding: 3.5rem 1.5rem 3rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
 
-    .toggle {
-      margin: 0;
-      padding: 1.25rem 1.5rem;
-      background-color: rgba(255, 255, 255, 0.05);
-      cursor: pointer;
-      position: relative;
-      font-size: 1.25rem;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
+        header .eyebrow {
+            margin: 0 0 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--brand);
+        }
 
-    .toggle::after {
-      content: "▼";
-      position: absolute;
-      right: 1.5rem;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: transform 0.3s ease;
-    }
+        header h1 {
+            margin: 0;
+            font-size: clamp(2.4rem, 6vw, 4.4rem);
+            letter-spacing: -0.05em;
+            line-height: 0.95;
+        }
 
-    .toggle.open::after {
-      transform: translateY(-50%) rotate(180deg);
-    }
+        header p {
+            max-width: 780px;
+            margin: 1.25rem auto 0;
+            font-size: 1.08rem;
+            line-height: 1.7;
+            color: var(--muted);
+        }
 
-    .details {
-      padding: 1.2rem 1.5rem;
-      display: none;
-      animation: slideDown 0.3s ease forwards;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      white-space: pre-wrap;
-    }
+        .container {
+            max-width: 980px;
+            margin: 2rem auto 3rem;
+            padding: 0 1rem;
+        }
 
-    .back-link {
-      text-align: center;
-      margin: 30px 0;
-    }
+        .summary-card {
+            background: #fffaf4;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            box-shadow: none;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-    .back-link a {
-      color: #00bcd4;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        .summary-card h2 {
+            margin: 0 0 0.65rem;
+            font-size: 1.45rem;
+            letter-spacing: -0.03em;
+        }
 
-    .back-link a:hover {
-      text-decoration: underline;
-    }
+        .summary-card p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
 
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        max-height: 0;
-      }
-      to {
-        opacity: 1;
-        max-height: 1000px;
-      }
-    }
-  </style>
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            margin-top: 1rem;
+        }
+
+        .skill {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 8px;
+            border: 1px solid #e6ddd3;
+            background: transparent;
+            color: #4a3520;
+            font-size: 0.92rem;
+            font-weight: 700;
+            padding: 0.45rem 0.6rem;
+            letter-spacing: 0.01em;
+        }
+
+        .experience-item {
+            background-color: #fffaf4;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: none;
+            border: 1px solid var(--border);
+        }
+
+        .toggle {
+            margin: 0;
+            padding: 1.25rem 3.25rem 1.25rem 1.4rem;
+            background-color: #f5efe6;
+            color: var(--text);
+            cursor: pointer;
+            position: relative;
+            font-size: 1.13rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.35;
+        }
+
+        .toggle span {
+            display: block;
+            margin-top: 0.25rem;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            color: var(--muted);
+        }
+
+        .toggle::after {
+            content: "▼";
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease;
+            color: var(--brand);
+        }
+
+        .toggle.open::after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .details {
+            padding: 1.3rem 1.5rem 1.5rem;
+            display: none;
+            animation: slideDown 0.3s ease forwards;
+            font-size: 1rem;
+            line-height: 1.65;
+            color: var(--text);
+        }
+
+        .details p {
+            margin: 0 0 0.9rem;
+        }
+
+        .details ul {
+            margin: 0.5rem 0 0;
+            padding-left: 1.25rem;
+        }
+
+        .details li {
+            margin-bottom: 0.55rem;
+        }
+
+        .role-label {
+            color: var(--brand);
+            font-weight: 800;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-link a {
+            color: var(--brand);
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 2.5rem 1rem 2.25rem;
+            }
+
+            .toggle {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>My Skills</h1>
-  </header>
+    <header>
+        <p class="eyebrow">Experience & Practical Work</p>
+        <h1>My Experience</h1>
+        <p>I build practical digital systems under Logic Lab Studio, with a focus on websites, SaaS platforms, admin dashboards, automation tools, and business systems that solve real problems.</p>
+    </header>
 
-  <div class="container">
-    <div class="skill-item">
-      <h2 class="toggle">Data Manipulation</h2>
-      <div class="details">
-        In 2023, I completed a one-year Data Science Certificate at the Academic Institute of Excellence (AIE), which was a highly rewarding and practical learning experience.
+    <main class="container">
+        <section class="summary-card">
+            <h2>Developer Profile</h2>
+            <p>I am a junior software developer and founder-builder working on real products, not just practice projects. My work combines front-end design, ASP.NET Core MVC, C#, Entity Framework Core, databases, Azure deployment, business workflows, and monetization-focused product thinking.</p>
+            <div class="skills" aria-label="Core skills">
+                <span class="skill">ASP.NET Core MVC</span>
+                <span class="skill">C#</span>
+                <span class="skill">Entity Framework Core</span>
+                <span class="skill">SQL Server / SQLite</span>
+                <span class="skill">HTML, CSS & JavaScript</span>
+                <span class="skill">Azure App Service</span>
+                <span class="skill">Admin Dashboards</span>
+                <span class="skill">SaaS Products</span>
+            </div>
+        </section>
 
-        Throughout the program, I engaged deeply with real-world data projects that challenged me to develop hands-on skills rather than just theoretical knowledge. I became proficient in using Python, especially libraries such as Pandas, NumPy, Matplotlib, and Seaborn to clean, transform, and analyze data.
+        <section class="experience-item">
+            <h2 class="toggle">Logic Lab Studio — Founder & Full-Stack App Builder <span>2025 to Present</span></h2>
+            <div class="details">
+                <p><span class="role-label">Role:</span> Founder, developer, product designer, and builder of digital business systems.</p>
+                <p>I started Logic Lab Studio to build useful web platforms, business tools, landing pages, admin systems, and small SaaS products. The work has strengthened my ability to turn an idea into a working product with real business value.</p>
+                <ul>
+                    <li>Built and improved websites, landing pages, promotional pages, and business-facing digital tools.</li>
+                    <li>Created HTML-first tools such as generators, branded pages, flyer-style layouts, and practical client-ready web assets.</li>
+                    <li>Worked on product positioning, pricing ideas, client acquisition, WhatsApp marketing, and service packaging.</li>
+                    <li>Designed systems with real-world use in mind: clear user flows, admin control, payment readiness, and scalable structure.</li>
+                </ul>
+            </div>
+        </section>
 
-        Alongside Python, I utilized Microsoft Excel extensively—employing formulas, pivot tables, and charts to dissect data from multiple perspectives.
+        <section class="experience-item">
+            <h2 class="toggle">Vocentra — SaaS Job Board Platform <span>ASP.NET Core MVC, EF Core, SQL Server, Azure</span></h2>
+            <div class="details">
+                <p><span class="role-label">Role:</span> Full-stack developer and product owner.</p>
+                <p>Vocentra is a real job board and hiring marketplace focused on structured local recruitment. The platform is designed to help job seekers apply easily while giving employers a paid, controlled way to publish job listings.</p>
+                <ul>
+                    <li>Built core MVC features for jobs, applications, saved jobs, employer workflows, and admin moderation.</li>
+                    <li>Implemented production-focused architecture using ASP.NET Core MVC, Identity, roles, EF Core, and database-backed workflows.</li>
+                    <li>Worked through Azure deployment, Azure SQL configuration, application settings, production startup errors, migrations, and diagnostics.</li>
+                    <li>Designed payment-gated publishing logic where employers submit proof of payment and admins verify listings before they go live.</li>
+                    <li>Developed the product strategy around employer-paid listings, one-click apply, admin-gated publishing, and marketplace trust.</li>
+                </ul>
+            </div>
+        </section>
 
-        A notable project involved the AdventureWorks sample database, where I learned to write complex SQL queries for data extraction and reporting. This experience taught me how to join tables, filter data, and aggregate results effectively.
+        <section class="experience-item">
+            <h2 class="toggle">Business Website & E-commerce Builds <span>Client-style projects and branded systems</span></h2>
+            <div class="details">
+                <p><span class="role-label">Role:</span> Web developer and digital product builder.</p>
+                <p>Through Logic Lab Studio, I have worked on practical website concepts for small businesses, clothing brands, food brands, portfolio pages, and marketing pages. These projects helped me improve the way I structure layouts, product pages, navigation, branding, and conversion-focused content.</p>
+                <ul>
+                    <li>Created branded website concepts for small businesses and local brands.</li>
+                    <li>Worked on e-commerce-style layouts with product sections, category pages, calls to action, and responsive design.</li>
+                    <li>Designed promotional assets, image placeholders, testimonials, and one-page brand sections for client-facing use.</li>
+                    <li>Focused on building sites that are clean, mobile-friendly, and ready to turn visitors into leads or customers.</li>
+                </ul>
+            </div>
+        </section>
 
-        Most importantly, this journey helped me develop a strong analytical mindset, enabling me to identify patterns, clean messy data, and communicate insights clearly through visualizations and reports. These skills have become integral to how I approach problem-solving with data.
-      </div>
-    </div>
+        <section class="experience-item">
+            <h2 class="toggle">Automation & Algorithmic Systems <span>C#, trading logic, state tracking, debugging</span></h2>
+            <div class="details">
+                <p><span class="role-label">Role:</span> Volunteer developer and technical problem solver.</p>
+                <p>I developed and maintained algorithmic trading logic in C#, working with rule-based systems, trade state tracking, cooldowns, loss recovery logic, and strategy switching. This improved my ability to debug complex flows and think carefully about risk, automation, and system behavior.</p>
+                <ul>
+                    <li>Built C# logic for automated trading workflows and decision-based execution.</li>
+                    <li>Improved my understanding of state management, defensive coding, and error handling.</li>
+                    <li>Worked with financial-style logic where small mistakes can create real consequences, which strengthened my attention to detail.</li>
+                </ul>
+            </div>
+        </section>
 
-    <div class="skill-item">
-      <h2 class="toggle">Database Management</h2>
-      <div class="details">
-        My experience with database management combines both formal education and practical application.
+        <section class="experience-item">
+            <h2 class="toggle">Absolutely Perfect Water Orkney <span>June 2024 to January 2025</span></h2>
+            <div class="details">
+                <img src="images/PW.png" alt="Absolutely Perfect Water Logo" class="logo" />
+                <p><span class="role-label">Roles:</span> Sales Assistant, Water Technician, and Product Marketer.</p>
+                <p>This role gave me practical business experience before and during my move into software. I worked directly with customers, promoted the franchise, supported walk-in sales, helped with water purification tasks, and contributed ideas around pricing, packaging, loyalty, and customer experience.</p>
+                <ul>
+                    <li>Handled customer service and explained product value clearly to customers.</li>
+                    <li>Promoted a newly opened local franchise and supported walk-in sales growth.</li>
+                    <li>Suggested business improvements around dynamic pricing, branded packaging, and loyalty strategy.</li>
+                    <li>Learned how real businesses depend on operations, trust, customer service, and consistent presentation.</li>
+                </ul>
+            </div>
+        </section>
 
-        During my Data Science Certificate program, I worked extensively with relational database systems such as MySQL and PostgreSQL. I learned to design efficient database schemas, write optimized SQL queries, and ensure data integrity through normalization and indexing.
+        <section class="experience-item">
+            <h2 class="toggle">Current Direction <span>Production-ready SaaS, dashboards, and business platforms</span></h2>
+            <div class="details">
+                <p>I am currently focused on becoming stronger at building complete production-ready systems. My goal is to ship platforms that can be deployed, maintained, monetized, and used by real customers.</p>
+                <ul>
+                    <li>Building better ASP.NET Core MVC applications with clean models, controllers, services, and database layers.</li>
+                    <li>Improving admin dashboards, authentication, authorization, payment workflows, and deployment reliability.</li>
+                    <li>Creating useful small tools and platforms under Logic Lab Studio that can attract clients and generate revenue.</li>
+                    <li>Continuing to learn by building real products instead of only following tutorials.</li>
+                </ul>
+            </div>
+        </section>
 
-        Beyond coursework, I applied these skills in project settings where I built and managed databases to support data analysis and reporting needs.
+        <div class="back-link">
+            <a href="index.html">&larr; Back to Home Page</a>
+        </div>
+    </main>
 
-        This solid foundation has equipped me to understand both the structural and operational aspects of databases, allowing me to manage data effectively and support data-driven decision-making.
-      </div>
-    </div>
+    <script>
+        document.querySelectorAll('.toggle').forEach(header => {
+            header.addEventListener('click', () => {
+                const details = header.nextElementSibling;
+                const isOpen = header.classList.contains('open');
 
-    <div class="skill-item">
-      <h2 class="toggle">Data Mining Skills</h2>
-      <div class="details">
-        I developed my data mining capabilities through a combination of academic modules and independent research projects.
+                document.querySelectorAll('.toggle').forEach(h => h.classList.remove('open'));
+                document.querySelectorAll('.details').forEach(d => d.style.display = 'none');
 
-        Using tools like Weka and Python’s scikit-learn library, I explored techniques such as classification, clustering, and association rule mining. These projects required me to preprocess datasets, select appropriate algorithms, and evaluate model performance critically.
-
-        The practical exposure helped me understand how to uncover hidden patterns and relationships within data, which is essential for building predictive models and making informed decisions.
-
-        This hands-on experience strengthened my ability to translate complex data into actionable insights.
-      </div>
-    </div>
-
-    <div class="skill-item">
-      <h2 class="toggle">Solution Development</h2>
-      <div class="details">
-        Solution development is an area where I thrive by applying both technical skills and problem-solving abilities.
-
-        Through collaborative projects and freelance work, I have designed and implemented end-to-end software solutions tailored to address real-world challenges.
-
-        I apply software engineering principles to ensure solutions are robust, maintainable, and scalable. From requirements gathering and system design to coding and testing, I take a comprehensive approach to delivering effective results.
-
-        This process has sharpened my adaptability and creativity, allowing me to craft solutions that meet user needs while aligning with business goals.
-      </div>
-    </div>
-
-    <div class="skill-item">
-      <h2 class="toggle">Financial Markets</h2>
-      <div class="details">
-        My understanding of financial markets stems from a strong personal interest combined with disciplined self-study.
-
-        I have engaged in simulated trading environments to practice technical and fundamental analysis, applying indicators and strategies to track market trends.
-
-        Analyzing market behavior has deepened my insight into how economic factors, news events, and investor psychology influence asset prices.
-
-        This knowledge complements my data analysis skills and gives me a broader perspective on applying data-driven approaches in financial contexts.
-      </div>
-    </div>
-
-    <div class="back-link">
-      <a href="index.html">&larr; Back to Home Page</a>
-    </div>
-  </div>
-
-  <script>
-    document.querySelectorAll('.toggle').forEach(header => {
-      header.addEventListener('click', () => {
-        const details = header.nextElementSibling;
-        const isOpen = header.classList.contains('open');
-
-        document.querySelectorAll('.toggle').forEach(h => h.classList.remove('open'));
-        document.querySelectorAll('.details').forEach(d => d.style.display = 'none');
-
-        if (!isOpen) {
-          header.classList.add('open');
-          details.style.display = 'block';
-        }
-      });
-    });
-  </script>
+                if (!isOpen) {
+                    header.classList.add('open');
+                    details.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
